@@ -1,0 +1,85 @@
+.decisions {
+    background: url("../img/background_main/prengi-background.png") center/cover no-repeat;
+    padding: 80px 0 60px 0;
+    position: relative;
+    z-index: 1;
+    height: 750px;
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -2;
+        background: url("../img/background_main/shadow_background.png") center/cover no-repeat;
+        opacity: 0.4;
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        background-color: rgb(0, 0, 0);
+        opacity: 0.5;
+    }
+    h1 {
+        text-align: center;
+        font-size: 42px;
+        color: #FFFFFF;
+    }
+    &__links {
+        border: 1px solid white;
+        border-radius: 6px;
+        margin: 0 auto;
+        margin-top: 25px;
+        width: calc(100% - 66px);
+        height: 65px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0 33px 0 33px;
+        margin-bottom: 35px;
+    }
+    &__link {
+        height: 50px;
+        width: auto;
+        border-right: 1px solid white;
+        padding-right: 40px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        &:nth-child(6) {
+            border-right: none;
+            padding-right: 0;
+        }
+        a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            &:hover {
+                color: $main-color
+            }
+        }
+    }
+    &__macbook {
+        position: relative;
+        width: 100%;
+        img {
+            display: block;
+            margin: 0 auto;
+            z-index: 3;
+            &:nth-child(2) {
+                position: absolute;
+                z-index: 5;
+                left: 50%;
+                top: 37px;
+                transform: translateX(-50%);
+            }
+        }
+    }
+}
